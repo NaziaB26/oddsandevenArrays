@@ -3,8 +3,8 @@
  * @param {number} b
  * @returns {number} the sum of a and b
  */
-function sum(a, b) {
-    return a + b;
+function partitionOddEven(inputArray) {
+    return;
 }
 
-export { sum };
+export { partitionOddEven };

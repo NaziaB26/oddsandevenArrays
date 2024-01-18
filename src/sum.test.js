@@ -1,12 +1,22 @@
-import { sum } from "./sum.js";
+import { partitionOddEven} from "./sum.js";
 
 // jest docs for expect "matchers"
 // https://jestjs.io/docs/expect
 
-test("adds 1 + 2 to equal 3", () => {
-    expect(sum(1, 2)).toBe(3);
+test("mixed numbers", () => {
+    expect(partitionOddEven([20,5, 8, 3,9,11])).toEqual([[5, 3, 9 ,11], [20,8]]);
 });
 
-test("adds 10 + 20 to equal 30", () => {
-    expect(sum(10, 20)).toBe(30);
+test("only odds", () => {
+    expect(partitionOddEven([1,7,9,13,5])).toEqual([[1,7,9,13,5],[]]);
+});
+
+
+test("only evens", () => {
+    expect(partitionOddEven([2, 6, 10, 8])).toEqual([[],[2, 6, 10, 8]]);
+});
+
+
+test("empty array", () => {
+    expect(partitionOddEven([])).toEqual([[],[]]);
 });
